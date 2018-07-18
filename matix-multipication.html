@@ -1,0 +1,18 @@
+<html>
+<meta charset="utf-8">
+<body>
+    <script src="gpu.js"></script>
+<script>
+const gpu = new GPU({mode: 'webgl'});
+const render = gpu.createKernel(function() {
+    this.color(this.thread.x/500, this.thread.y/500, 0.4, 1);
+})
+  .setOutput([500, 500])
+  .setGraphical(true);
+
+render();
+const canvas = render.getCanvas();
+document.getElementsByTagName('body')[0].appendChild(canvas);
+
+</script>
+</html>
