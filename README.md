@@ -1,4 +1,4 @@
-[example1 - matrix multiplication](https://a402539.github.io/gpu.js/index.html)
+[example1 - matrix multiplication](https://a402539.github.io/gpu.js/matix-multipication.html)
 [![Logo](http://gpu.rocks/img/ogimage.png)](http://gpu.rocks/)
 
 
