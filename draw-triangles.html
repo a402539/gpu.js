@@ -82,7 +82,7 @@
 		for (var nl = 0; nl < LOC.length; nl++)
 			dbgMsg += (nl+1) + "> " + LOC[nl] + "\n";
 
-		dbgMsg += "\n--------------------- ERROR  LOG ---------------------\n" + gl.getShaderInfoLog(fraggShader)
+		dbgMsg += "\n--------------------- ERROR  LOG ---------------------\n" + gl.getShaderInfoLog(fragShader)
 
 		throw new Error(dbgMsg);
 	}
