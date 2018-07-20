@@ -159,10 +159,12 @@
          // WebGL2: 
          //void gl.readPixels(x, y, width, height, format, type, GLintptr offset); 
          //void gl.readPixels(x, y, width, height, format, type, ArrayBufferView pixels, GLuint dstOffset);
-         pixels = new Uint8Array(canvas.width*canvas.height*4);
-         console.log('pixel colors');
-         gl.readPixels(0,0,canvas.width,canvas.height,gl.RGBA,gl.UNSIGNED_BYTE,pixels);
-         console.log(pixels);
+         setTimeout(function(){
+	 	pixels = new Uint8Array(canvas.width*canvas.height*4);
+         	console.log('pixel colors');
+         	gl.readPixels(0,0,canvas.width,canvas.height,gl.RGBA,gl.UNSIGNED_BYTE,pixels);
+         	console.log(pixels);
+	 },500);
       </script>
    
    </body>
