@@ -160,7 +160,7 @@
          //void gl.readPixels(x, y, width, height, format, type, GLintptr offset); 
          //void gl.readPixels(x, y, width, height, format, type, ArrayBufferView pixels, GLuint dstOffset);
 	 	pixels = new Uint8Array(canvas.width*canvas.height*4);
-         	console.log('pixel colors');
+         	console.log('pixel colors', pixels);
          	gl.readPixels(0,0,canvas.width,canvas.height,gl.RGBA,gl.UNSIGNED_BYTE,pixels);
          	console.log(pixels);
 	  for(var i=0;i<pixels.length;i+=4){
