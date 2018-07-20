@@ -7,7 +7,7 @@
          /* Step1: Prepare the canvas and get WebGL context */
 
          var canvas = document.getElementById('my_Canvas');
-         var gl = canvas.getContext('experimental-webgl');
+         var gl = canvas.getContext('webgl', {preserveDrawingBuffer: true}); 
 
          /* Step2: Define the geometry and store it in buffer objects */
 
