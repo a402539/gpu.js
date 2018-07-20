@@ -61,9 +61,10 @@
          var fragCode = 
 	     'precision highp float;\n' +
 	     'varying vec2 point;\n' +
-	     'vec2 color;\n' +
-	     'color = point*0.5+0.5;\n' +
-	     'void main(void) {' + 'gl_FragColor = vec4(color, 0.0, 0.1);' +
+	     'void main(void) {' + 
+		'vec2 color;\n' +
+		'color = point*0.5+0.5;\n' +
+	     	'gl_FragColor = vec4(color, 0.0, 0.1);' +
 	     '}';
 
          // Create fragment shader object
