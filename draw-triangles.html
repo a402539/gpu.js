@@ -29,6 +29,7 @@
 
          // Vertex shader source code
          var vertCode =
+	     'precision high float;\n' +
             'attribute vec2 coordinates;\n' + 
 	     'varying vec2 point;\n' +
             'void main(void) {' + ' gl_Position = vec4(coordinates,0.0, 1.0);\n' +
