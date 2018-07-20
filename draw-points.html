@@ -120,7 +120,7 @@
          var coord = gl.getAttribLocation(shaderProgram, "coordinates");
 
          // Point an attribute to the currently bound VBO
-         gl.vertexAttribPointer(coord, 3, gl.FLOAT, false, 0, 0);
+         gl.vertexAttribPointer(coord, 4, gl.FLOAT, false, 0, 0);
 
          // Enable the attribute
          gl.enableVertexAttribArray(coord);
