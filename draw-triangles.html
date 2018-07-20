@@ -44,7 +44,20 @@
          //Compile the vertex shader
          gl.compileShader(vertShader);
 
-         //Fragment shader source code
+	// Use this output to debug the shader
+	if (!gl.getShaderParameter(vertShader, gl.COMPILE_STATUS)) {
+		var LOC = vertCode.split('\n');
+		var dbgMsg = "ERROR: Could not build vertex shader (fatal).\n\n------------------ KERNEL CODE DUMP ------------------\n"
+
+		for (var nl = 0; nl < LOC.length; nl++)
+			dbgMsg += (nl+1) + "> " + LOC[nl] + "\n";
+
+		dbgMsg += "\n--------------------- ERROR  LOG ---------------------\n" + gl.getShaderInfoLog(vertShader)
+
+		throw new Error(dbgMsg);
+	}
+
+	 //Fragment shader source code
          var fragCode = 
 	     'varying point;' +
 	     'vec2 color;\n' +
@@ -61,7 +74,20 @@
          // Compile the fragment shader
          gl.compileShader(fragShader);
 
-         // Create a shader program object to store combined shader program
+	// Use this output to debug the shader
+	if (!gl.getShaderParameter(fragShader, gl.COMPILE_STATUS)) {
+		var LOC = fragCode.split('\n');
+		var dbgMsg = "ERROR: Could not build vertex shader (fatal).\n\n------------------ KERNEL CODE DUMP ------------------\n"
+
+		for (var nl = 0; nl < LOC.length; nl++)
+			dbgMsg += (nl+1) + "> " + LOC[nl] + "\n";
+
+		dbgMsg += "\n--------------------- ERROR  LOG ---------------------\n" + gl.getShaderInfoLog(fraggShader)
+
+		throw new Error(dbgMsg);
+	}
+
+	 // Create a shader program object to store combined shader program
          var shaderProgram = gl.createProgram();
 
          // Attach a vertex shader
