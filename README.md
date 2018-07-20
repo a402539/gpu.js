@@ -2,6 +2,7 @@
 
 [Наша ссылка на draw-points](https://a402539.github.io/gpu.js/draw-points.html)
 
+[Наша ссылка на draw-triangles](https://a402539.github.io/gpu.js/draw-triangles.html)
 
 
 
