@@ -89,7 +89,7 @@
 				var dbgMsg = "ERROR: Could not build fragment shader (fatal).\n\n------------------ KERNEL CODE DUMP ------------------\n"
 
 				for (var nl = 0; nl < LOC.length; nl++)
-					dbgMsg += (fragCode.split('\n').length + nl) + "> " + LOC[nl] + "\n";
+					dbgMsg += (nl+1) + "> " + LOC[nl] + "\n";
 
 				dbgMsg += "\n--------------------- ERROR  LOG ---------------------\n" + gl.getShaderInfoLog(fragShader)
 
