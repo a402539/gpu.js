@@ -59,7 +59,7 @@
 				var dbgMsg = "ERROR: Could not build vertex shader (fatal).\n\n------------------ KERNEL CODE DUMP ------------------\n"
 
 				for (var nl = 0; nl < LOC.length; nl++)
-					dbgMsg += (vertCode.split('\n').length + nl) + "> " + LOC[nl] + "\n";
+					dbgMsg += (nl+1) + "> " + LOC[nl] + "\n";
 
 				dbgMsg += "\n--------------------- ERROR  LOG ---------------------\n" + gl.getShaderInfoLog(vertShader)
 
@@ -154,13 +154,13 @@
          gl.drawArrays(gl.POINTS, 0, 3);
          
          // WebGL1: 
-				 //void gl.readPixels(x, y, width, height, format, type, pixels); 
+	//void gl.readPixels(x, y, width, height, format, type, pixels); 
 
          // WebGL2: 
          //void gl.readPixels(x, y, width, height, format, type, GLintptr offset); 
          //void gl.readPixels(x, y, width, height, format, type, ArrayBufferView pixels, GLuint dstOffset);
 	 	pixels = new Uint8Array(canvas.width*canvas.height*4);
-         	console.log('pixel colors', pixels);
+         	console.log('pixel colors');
          	gl.readPixels(0,0,canvas.width,canvas.height,gl.RGBA,gl.UNSIGNED_BYTE,pixels);
          	console.log(pixels);
 	  for(var i=0;i<pixels.length;i+=4){
