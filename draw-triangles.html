@@ -29,7 +29,6 @@
 
          // Vertex shader source code
          var vertCode =
-	     'precision high float;\n' +
             'attribute vec2 coordinates;\n' + 
 	     'varying vec2 point;\n' +
             'void main(void) {' + ' gl_Position = vec4(coordinates,0.0, 1.0);\n' +
@@ -60,6 +59,7 @@
 
 	 //Fragment shader source code
          var fragCode = 
+	     'precision high float;\n' +
 	     'varying point;' +
 	     'vec2 color;\n' +
 	     'color = point*.05+0.5;\n' +
