@@ -39,9 +39,9 @@
             'attribute vec2 coordinates;' +
 		'varying vec2 point;' + 
             'void main(void) {' +
-               'gl_Position = vec4(coordinates, 0.0, 1.0);' +
-               'gl_PointSize = 50.0;' +
 		'point = coordinates*0.5+0.5;' +
+               'gl_Position = vec4(point, 0.0, 1.0);' +
+               'gl_PointSize = 50.0;' +
             '}';
 
          // Create a vertex shader object
