@@ -98,6 +98,12 @@
 
          // Draw the triangle
          gl.drawArrays(gl.TRIANGLES, 0, 3);
+	      
+	 // Read pixels
+	 pixels = new Uint8Array(canvas.width*canvas.height*4);
+         console.log('pixel colors');
+         gl.readPixels(0,0,canvas.width,canvas.height,gl.RGBA,gl.UNSIGNED_BYTE,pixels);
+         console.log(pixels);
       </script>
    </body>
 </html>
